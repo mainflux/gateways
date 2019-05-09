@@ -1,0 +1,32 @@
+#
+# Copyright (c) 2019
+# Mainflux
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+copyright: Copyright (c) 2015-2019 Mainflux
+repo_url: https://github.com/mainflux/mfx-1
+site_description: Mainflux IoT System
+site_name: Mainflux MFX-1 Gateway
+theme: readthedocs
+
+extra:
+  logo: docs/img/logo.png
+  author:
+    github: mainflux/mfx-1
+    twitter: mainflux
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: '#'
+
+pages:
+- Overview:
+    - About: index.md
+    - Contributing: CONTRIBUTING.md
+    - License: LICENSE.txt
+- MFX-1: mfx-1.md
+- MFX Mini: mfx-mini.md
+- EdgeX: edgex.md
