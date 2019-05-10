@@ -36,6 +36,22 @@ Follow the instructions [here](http://zeromq.org/build:arm):
 
 Produced library will be located in `src/.libs/`
 
+##### Gateway
+You need the same ZMQ on the gateway as well, as CGO will link it dynamically.
+Static linking would demand linking of stdlib and then it demands toolchain and so on.
+
+So easier way is just to compile and install same version of ZMQ on gateway:
+
+```
+sudo apt install -y libtool pkg-config build-essential autoconf automake uuid-dev
+./autogen
+./configure
+make
+sudo make install
+```
+
+
+
 #### EdgeX Foundry
 EdgeX Foundry must be cross-compiled for ARM (in order to speed-up the time of native compilation on resource-modest ARM gateway).
 
@@ -81,7 +97,7 @@ Redis should be used. Example:
   Type = 'redisdb'
 ```
 
-This should be put for `core-data`, `core-metadata`, `export-client` and `support-notifications` microservices.
+This should be put for `core-data`, `core-metadata`, `export-client`, `support-scheduler` and `support-notifications` microservices.
 
 `support-logging` does not yet have Redis enablement, so `file` setting can be used:
 
