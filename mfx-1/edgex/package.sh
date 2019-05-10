@@ -24,10 +24,10 @@ mkdir -p $PKG_DIR
 for i in "${SERVICES[@]}"; do
   mkdir -p $PKG_DIR/$i
   cp $CMD_DIR/$i/$i $PKG_DIR/$i
-  cp $CMD_DIR/$i/res/configuration.toml $PKG_DIR/$i 2>/dev/null || :
+  cp -r $CMD_DIR/$i/res $PKG_DIR/$i 2>/dev/null || :
 done
 
 # Copy and modify run script
 cp run.sh $PKG_DIR
 sed -i 's#BIN_DIR=../cmd#BIN_DIR=.#g' $PKG_DIR/run.sh
-sed -i 's#EDGEX_CONF_DIR=./res#EDGEX_CONF_DIR=.#g' $PKG_DIR/run.sh
+#sed -i 's#EDGEX_CONF_DIR=./res#EDGEX_CONF_DIR=.#g' $PKG_DIR/run.sh
