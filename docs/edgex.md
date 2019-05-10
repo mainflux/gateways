@@ -81,4 +81,12 @@ Redis should be used. Example:
   Type = 'redisdb'
 ```
 
-This should be put for `core-data`, `core-metadata`, `export-client`, `support-logging` and `support-notifications` microservices. 
+This should be put for `core-data`, `core-metadata`, `export-client` and `support-notifications` microservices.
+
+`support-logging` does not yet have Redis enablement, so `file` setting can be used:
+
+```
+[Writable]
+Persistence = 'file'
+LogLevel = 'INFO'
+```
