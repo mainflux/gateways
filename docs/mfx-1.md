@@ -20,6 +20,12 @@ under `MicroSD 2 jumpers will be needed: (3+4), (5+6)` chapter.
 Once you are greeted by a login prompt, the default username and password are both "debian".
 For security reasons there is no root password! If you really need one, you can run `sudo passwd root` to set your own.
 
+#### Flashing eMMC from SD card
+If Debian is used, instructions for flashing eMMC from SD card can be found
+[here](https://developer.solid-run.com/knowledge-base/i-mx6-debian/).
+
+Besically, WiFi has to be enabled first, Debain image then can be downloaded and `dd`-ed directly to the flash.
+
 ## WiFi
 File `/etc/network/interfaces` already includes files from `/etc/network/interfaces.d` directory:
 
@@ -62,4 +68,7 @@ Either install Filezilla or use Nautilus:
 - In Nautilus window press `Ctrl + L`
 - Type `sftp://sr-imx6.local`
 
+## Docker
+To install Docker, follow the instructions [here](https://docs.docker.com/install/linux/docker-ce/debian/).
 
+Then follow [post installtion steps](https://docs.docker.com/install/linux/linux-postinstall/) to add user to `docker` group.
