@@ -8,7 +8,22 @@ Documentation about Solid Run HW can be found here: https://developer.solid-run.
 
 In particular, information about i.MX6 SoM can be found here: https://developer.solid-run.com/products/imx6-som/
 
-### Falshing SD card
+## UART
+UART pins are located on the edge on the board:
+
+![](img/board_uart_1.jpg)
+
+They should be connected to PC via UART-to-USB cable:
+
+![](img/board_uart_2.jpg)
+
+More information can be found [here](https://developer.solid-run.com/knowledge-base/hummingboard-gate-edge-uart-console/).
+
+Use [Minicom](https://en.wikipedia.org/wiki/Minicom) or other serial terminal to read UART console from the board.
+
+Official guide can be found [here](https://developer.solid-run.com/knowledge-base/serial-connection/).
+
+## Falshing SD card
 Instructions can be found here: https://developer.solid-run.com/knowledge-base/flashing-an-sd-card/
 
 Software can be donloaded from here: https://developer.solid-run.com/article-categories/i-mx6-software/
@@ -20,7 +35,7 @@ under `MicroSD 2 jumpers will be needed: (3+4), (5+6)` chapter.
 Once you are greeted by a login prompt, the default username and password are both "debian".
 For security reasons there is no root password! If you really need one, you can run `sudo passwd root` to set your own.
 
-#### Flashing eMMC from SD card
+### Flashing eMMC from SD card
 If Debian is used, instructions for flashing eMMC from SD card can be found
 [here](https://developer.solid-run.com/knowledge-base/i-mx6-debian/).
 
