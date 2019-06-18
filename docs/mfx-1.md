@@ -26,7 +26,7 @@ Official guide can be found [here](https://developer.solid-run.com/knowledge-bas
 ## Falshing SD card
 Instructions can be found here: https://developer.solid-run.com/knowledge-base/flashing-an-sd-card/
 
-Software can be donloaded from here: https://developer.solid-run.com/article-categories/i-mx6-software/
+Software can be downloaded from here: https://developer.solid-run.com/article-categories/i-mx6-software/
 
 For SD card jumpers 3-4 and 5-6 need to be set, like explained
 [here](https://developer.solid-run.com/knowledge-base/hummingboard-edge-gate-boot-jumpers/)
@@ -39,7 +39,7 @@ For security reasons there is no root password! If you really need one, you can 
 If Debian is used, instructions for flashing eMMC from SD card can be found
 [here](https://developer.solid-run.com/knowledge-base/i-mx6-debian/).
 
-Besically, WiFi has to be enabled first, Debain image then can be downloaded and `dd`-ed directly to the flash.
+Besically, WiFi has to be enabled first, Debian image then can be downloaded and `dd`-ed directly to the flash.
 
 ## WiFi
 File `/etc/network/interfaces` already includes files from `/etc/network/interfaces.d` directory:
