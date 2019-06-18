@@ -32,6 +32,7 @@ Follow the instructions [here](http://zeromq.org/build:arm):
 ```
 ./autogen.sh
 ./configure --host=arm-none-linux-gnueabihf CC=arm-linux-gnueabihf-gcc CXX=arm-linux-gnueabihf-g++
+make
 ```
 
 Produced library will be located in `src/.libs/`
