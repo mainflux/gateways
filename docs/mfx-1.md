@@ -58,6 +58,16 @@ iface wlan0 inet dhcp
         wpa-essid <name-of-wifi-network>
         wpa-psk <wifi-password>
 ```
+or user builtin connmanctl
+
+```
+wpa_passphrase NETWORK_SSID PASS ( obtain psk passphrase )
+sudo connmanctl
+enable wifi
+scan services
+connect
+
+```
 
 > After creating this file a restart is needed. Hints can be found [here](https://askubuntu.com/questions/333063/restart-network-interface-after-editing-etc-network-interfaces)m but in the worst case whole gateway can be restarted.
 
