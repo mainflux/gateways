@@ -23,7 +23,7 @@ Use [Minicom](https://en.wikipedia.org/wiki/Minicom) or other serial terminal to
 
 Official guide can be found [here](https://developer.solid-run.com/knowledge-base/serial-connection/).
 
-## Falshing SD card
+## Flashing SD card
 Instructions can be found here: https://developer.solid-run.com/knowledge-base/flashing-an-sd-card/
 
 Software can be downloaded from here: https://developer.solid-run.com/article-categories/i-mx6-software/
@@ -97,3 +97,27 @@ Either install Filezilla or use Nautilus:
 To install Docker, follow the instructions [here](https://docs.docker.com/install/linux/docker-ce/debian/).
 
 Then follow [post installtion steps](https://docs.docker.com/install/linux/linux-postinstall/) to add user to `docker` group.
+
+## 3G-4G Connection
+
+Following [this instruction](https://www.robertlucian.com/2018/08/29/mobile-network-access-rpi/) basic steps are
+```
+sudo apt-get update && sudo apt-get install -y --no-install-recommends ppp
+```
+use scripts/pppd-creator.sh
+
+```
+sudo bash ppp-creator.sh telenor ttyUSB3
+...
+
+creating script file : /etc/chatscripts/quectel-chat-connect                                                                 creating script file : /etc/chatscripts/quectel-chat-disconnect                              
+creating script file : /etc/ppp/peers/gprs 
+
+```
+then start connection
+
+```
+sudo pppd call gprs&
+
+sudo ifconfig ppp0 //validate connection
+```
