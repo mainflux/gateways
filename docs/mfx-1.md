@@ -108,11 +108,17 @@ use scripts/pppd-creator.sh
 
 ```
 sudo bash ppp-creator.sh telenor ttyUSB3
-...
+
 
 creating script file : /etc/chatscripts/quectel-chat-connect                                                                 creating script file : /etc/chatscripts/quectel-chat-disconnect                              
 creating script file : /etc/ppp/peers/gprs 
 
+```
+edit /etc/ppp/pap-secrets
+adding
+```
+#user host pass
+telenor * gprs
 ```
 then start connection
 
