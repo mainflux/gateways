@@ -64,8 +64,10 @@ or user builtin connmanctl
 wpa_passphrase NETWORK_SSID PASS ( obtain psk passphrase )
 sudo connmanctl
 enable wifi
-scan services
-connect
+scan wifi
+services
+agent on
+connect [access_point]
 
 ```
 
