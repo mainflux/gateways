@@ -21,7 +21,8 @@ More information can be found [here](https://developer.solid-run.com/knowledge-b
 
 Use [Minicom](https://en.wikipedia.org/wiki/Minicom) or other serial terminal to read UART console from the board.
 
-Official guide can be found [here](https://developer.solid-run.com/knowledge-base/serial-connection/).
+Official guide can be found [here](https://developer.solid-run.com/knowledge-base/serial-connection/) and [here](https://developer.solid-run.com/knowledge-base/serial-console-usb-uart/)  
+Note: disable Hardware Flow Control.
 
 ## Flashing SD card
 Instructions can be found here: https://developer.solid-run.com/knowledge-base/flashing-an-sd-card/
